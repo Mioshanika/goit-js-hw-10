@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-10/assets/favicon-DcBtz0py.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таймер зворотнього відліку</title>
+    <script type="module" crossorigin src="/goit-js-hw-10/1-timer.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-A92OCY9B.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CUZofXIC.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-BVIUYeF4.css">
+  </head>
+  <body>
+    <hr />
+    <a class="go-back" href="./index.html">Повернутися&nbsp;&#8668;</a>
+    <hr />
+
+    <div class="timer-group">
+      <input type="text" id="datetime-picker" />
+      <button type="button" data-start>Start</button>
+      <button type="button" data-stop>Stop</button>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>0000</span>
+          <span class="label">DAYS</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">HOURS</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">MINUTES</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">SECONDS</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
