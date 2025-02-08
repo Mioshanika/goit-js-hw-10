@@ -1,3 +1,5 @@
+/* Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /**
   |============================
   | include css partials with
@@ -11,8 +13,5 @@
 @import url('./animations.css');
 
 /* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./1-timer.css');
+@import url('./2-snackbar.css');
