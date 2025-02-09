@@ -11,11 +11,11 @@ const refs = {
   minutesDisplay: document.querySelector('[data-minutes]'),
   secondsDisplay: document.querySelector('[data-seconds]'),
 };
-const MAX_YEARS = 10;
+const MAX_DATE = 99; // +99 days from current date
 function calcMaxDate() {
   const dateNtime = new Date();
-  const maxYear = dateNtime.getFullYear() + MAX_YEARS;
-  dateNtime.setFullYear(maxYear);
+  const futureDays = dateNtime.getDate() + MAX_DATE;
+  dateNtime.setDate(futureDays);
   return dateNtime;
 }
 function convertMs(ms) {
@@ -57,7 +57,7 @@ const timeLeft = {
     if (this.intervalID) clearInterval(this.intervalID);
     refs.stopButton.disabled = true;
     refs.dateInput.disabled = false;
-    refs.daysDisplay.textContent = '0000';
+    refs.daysDisplay.textContent = '00';
     refs.hoursDisplay.textContent = '00';
     refs.minutesDisplay.textContent = '00';
     refs.secondsDisplay.textContent = '00';
@@ -69,7 +69,7 @@ const timeLeft = {
       return;
     }
     const diff = convertMs(diffMs);
-    refs.daysDisplay.textContent = diff.days.toString().padStart(4, '0');
+    refs.daysDisplay.textContent = diff.days.toString().padStart(2, '0');
     refs.hoursDisplay.textContent = diff.hours.toString().padStart(2, '0');
     refs.minutesDisplay.textContent = diff.minutes.toString().padStart(2, '0');
     refs.secondsDisplay.textContent = diff.seconds.toString().padStart(2, '0');
